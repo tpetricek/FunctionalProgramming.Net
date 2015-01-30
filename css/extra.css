@@ -1,0 +1,254 @@
+@import url(http://fonts.googleapis.com/css?family=News+Cycle:400,700);
+@import url(http://fonts.googleapis.com/css?family=Crimson+Text:400italic);
+
+/* -------------------------------------------------------------------------- */
+/* Standard formatting - styles for the main content                          */
+/* -------------------------------------------------------------------------- */
+
+p, ul li {
+  font-family:'News Cycle', sans-serif;
+  font-size:14pt;
+}
+
+ul li {
+  margin-bottom:5px;
+}
+
+code {
+  color:black;
+  font-weight:normal;
+}
+
+h2 {
+  font-family:'News Cycle', sans-serif;
+  font-weight:bold;
+  margin-bottom:0px;
+  color: #1F4763;
+}
+h3 {
+  margin:30px 0px 10px 0px;
+}
+h3.top {
+  margin-top:0px;
+}
+h4 {
+  font-weight:bold;
+  margin:15px 0px 5px 0px;
+}
+hr {
+  border: solid 5px #779EB5;
+  border-top-style:none;
+  margin-top:12px;
+}
+
+section {
+  padding:45px 0px 20px 0px;
+}
+
+section a {
+  color:#1471A8;
+  text-decoration:underline;
+}
+a:hover, a:focus {
+  color:#1B99E2;
+}
+
+pre {
+  border-style:none;
+  margin:10px 0px 10px 0px;
+  background:#779EB5;
+  color:white;
+  border-radius:0px;
+}
+
+blockquote {
+  background:#779EB5;
+  padding:10px 15px 15px 15px;
+  border-style:none;
+}
+blockquote p {
+  color:white;
+  margin:0px;
+  font-family: 'Crimson Text', serif;
+  font-style:italic;
+  font-size:15pt;
+}
+blockquote p.source {
+  text-align:right;
+  font-family:'News Cycle', sans-serif;
+  font-style:normal;
+  font-size:14pt;
+  margin:5px 0px 0px 0px;
+}
+blockquote a {
+  color:#002046;
+  text-decoration:none;
+}
+blockquote a:hover, blockquote a:focus {
+  color:#002046;
+  text-decoration:underline;
+}
+
+.no-bullet li {
+  list-style-type:none;
+}
+ul.no-bullet {
+  padding-left:30px;
+}
+
+ul.no-bullet i {
+  margin-right:5px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Section-specific things                                                    */
+/* -------------------------------------------------------------------------- */
+
+.img-decor {
+  text-align:center;
+}
+
+.img-decor img {
+  margin-top:30px;
+  width:220px;
+}
+.img-decor p {
+  margin-top:20px;
+  font-weight:bold;
+}
+
+#trainings .img-decor img {
+  width:200px;
+  margin-top:20px;
+}
+
+#reviews p.link {
+  margin-top:0px;
+  text-align:right;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Navbar - change colours of hyperlinks                                      */
+/* -------------------------------------------------------------------------- */
+
+.navbar {
+  background:#1F4763;
+  font-family:'News Cycle', sans-serif;
+  font-weight:bold;
+  font-size:12pt;
+}
+
+.navbar .nav li a:focus, .navbar .nav li a:hover, .navbar .nav li a:visited,
+.navbar .navbar-header a:focus, .navbar .navbar-header a:hover, .navbar .navbar-header a:visited {
+  color:white;
+  text-decoration:underline;
+}
+
+/* Use "Functional Programming .NET" as the brand on very small with collapsed
+   menu and on very large. On the middle sized screen, use "FP.NET" to fit navbar in */
+#navbar-brand-sm {
+  display:none;
+}
+#navbar-brand-lg {
+  display:inline;
+}
+@media (min-width: 768px) {
+  #navbar-brand-sm {
+    display:inline;
+  }
+  #navbar-brand-lg {
+    display:none;
+  }
+}
+@media (min-width: 992px) {
+  #navbar-brand-sm {
+    display:none;
+  }
+  #navbar-brand-lg {
+    display:inline;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* Header - colours and fonts for the header with blurb and RWFP man          */
+/* -------------------------------------------------------------------------- */
+
+header {
+  padding:80px 0px 20px 0px;
+  background:#497796;
+}
+#bigman {
+  display:none;
+}
+#smallman {
+  float:right;
+  width:100px;
+}
+header h1 {
+  font-family:'News Cycle', sans-serif;
+  font-weight:700;
+  font-size:25pt;
+  color:#002046;
+}
+header p {
+  font-family:'News Cycle', sans-serif;
+  font-size:16pt;
+  color:#deeaf2;
+}
+header p a, header p a:visited, header p a:hover, header p a:focus
+{
+  font-weight: bold;
+  color:white;
+}
+header .col-lg-5 {
+  text-align:right;
+}
+@media(min-width:1200px) {
+  header h1 {
+    font-size:30pt;
+  }
+  #bigman {
+    height:230px;
+    margin-right:100px;
+    display:inline;
+  }
+  #smallman {
+    display:none;
+  }
+}
+
+header#ad {
+  padding:10px 0px 7px 0px;
+  background:#779EB5;
+  color:white;
+}
+header#ad p strong {
+  color:white;
+}
+header#ad .flr {
+  float:right;
+  font-size:18pt;
+  color:white;
+  margin-left:10px;
+}
+/* -------------------------------------------------------------------------- */
+/* Footer                                                                     */
+/* -------------------------------------------------------------------------- */
+
+footer {
+  padding:30px 0px 80px 0px;
+  margin-top:50px;
+  background:#779EB5;
+  color:white;
+}
+
+footer a:link, footer a:visited, footer a:focus, footer a:hover {
+  text-decoration:underline;
+  color:white;
+}
+footer ul li {
+  margin:0px;
+}
+.scroll-top {
+  text-align:center;
+}

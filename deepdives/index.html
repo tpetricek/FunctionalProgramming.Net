@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="F# Deep Dives is a collection of case studies that demonstrate
+      how to use funcitonal-first programming in practice. Each chapter is written by an F# expert
+      and is based on their use of F# in industry.">
+    <meta name="author" content="Tomas Petricek">
+    <title>F# Deep Dives</title>
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/extra.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="page-top" class="index">
+
+<!-- ====================================================================================== -->
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../">Functional Programming .NET</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#reviews">Reviews</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#samples">Samples</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#errata">Errata</a>
+                </li>
+              </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<!-- ====================================================================================== -->
+
+<!-- Header -->
+<header>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-7 intro-text">
+      <img src="../img/diver.png" alt="F# Deep Dives" title="F# Deep Dives book cover" id="smallman"/>
+      <h1>F# Deep Dives</h1>
+      <p>F# Deep Dives is a collection of case studies that demonstrate how to use funcitonal-first
+        programming in practice. Each chapter is written by an F# expert and is based on their use
+        of F# in industry. You can get the book from <a href="http://www.manning.com/petricek2">Manning.com</a>, from
+        <a href="http://www.amazon.com/gp/product/1617291323/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1617291323&linkCode=as2&tag=httptomasnet-20&linkId=U4FPJJSKKCCKGNHD">Amazon.com</a> or
+        <a href="http://www.amazon.co.uk/gp/product/1617291323/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=1617291323&linkCode=as2&tag=tomasnet-21&linkId=HTUYVHHGWB4Q7X6V">Amazon.co.uk</a>
+        or your favorite book store.</p>
+    </div>
+    <div class="col-lg-5">
+      <img src="../img/diver.png" alt="F# Deep Dives" title="F# Deep Dives book cover" id="bigman"/>
+    </div>
+  </div>
+</div>
+</header>
+<header id="ad">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <a class="flr" href="mailto:info@fsharpworks.com"><i class="fa fa-envelope"></i></a>
+        <a class="flr" href="https://twitter.com/fsharpWorks"><i class="fa fa-twitter"></i></a>
+        <p><strong>Need more help?</strong> At F# Works, we also offer <a href="../#trainings">trainings</a> and <a href="../#consulting">consulting</a>.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ====================================================================================== -->
+
+<section id="reviews">
+<div class="container">
+  <div class="row"><div class="col-lg-12">
+    <h2>Reviews and quotes</h2>
+    <hr />
+    <p style="margin-bottom:30px;">Thanks to everyone who wrote a review or posted a comment about theF#
+      Deep Dives book. Thanks to the Manning Early Access program, the book was available to the
+      readers even before it was completed, which gave us some very valuable feedback.</p>
+  </div></div>
+  <div class="row">
+    <div class="col-lg-6">
+      <h3 class="top">Blogs and Online Magazines</h3>
+
+        <p>First of all, I want to mention that it is not a usual book about F# or another programming language. If you are novice to F# and looking for a guide of language constructs – this book is not the best choice for you. BUT,  if you are already familiar with F# basic syntax constructs, can read simple F# code samples and want to see the language in action – this book is for you.</p>
+        <p>(...) Finally, I want to say that the book is really good. Everyone will find interesting topics and a new experience. You will get a broader vision of F# application in a real life. You will see how a functional approach can change and simplify the architecture of real life apps. If you are looking for what to read next – take a look at “F# Deep Dives“, this book is really deserves it</p>
+        <p class="link"><a href="https://sergeytihon.wordpress.com/2014/12/20/review-f-deep-dives/">Sergey Tihon</a></p>
+
+        <p>As many readers of my writing will already know, I've been kind of "involved" with F# (and its cousin on the JVM, Scala) for a few years now, to the degree that I and a couple of really smart guys wrote a book on the subject. Now, assuming you're one of the .NET developers who've heard of F# and functional programming, and took a gander at the syntax, and maybe even bought a book on it (my publisher and I both thank you if you bought ours), but weren't quite sure what to do with it, a book has come along to help get you past that.</p>
+        <p>As of this writing, the early-access (...) version had only Chapters 3 (...) and Chapter 11 (...), but the other topics (...) are juicy and meaty, and both Tomas and Philip are recognized names in the F# space.  (...) In particular, the Markdown parser they implement in chapter 3 is a great example of a non-trivial language parser, which is not an easy task to approach but certainly a lot easier to do in a functional language. (...)</p>
+        <p class="link"><a href="http://blogs.tedneward.com/2013/01/05/Review+In+Advance+F+Deep+Dives.aspx">Ted Neward</a></p>
+    </div>
+    <div class="col-lg-6">
+      <h3 class="top">From the book cover</h3>
+
+      <blockquote>
+        <p>Finally! A book that shows a wide variety of applications for F#.</p>
+        <p class="source"><a href="http://manning.com/petricek2/">Jonathan DeCarlo Bentley Systems, Inc.</a></p>
+      </blockquote>
+      <blockquote>
+        <p>Beautifully written by F# experts — take a deep dive without holding your breath.</p>
+        <p class="source"><a href="http://manning.com/petricek2/">Kostas Passadis, IPTO</a></p>
+      </blockquote>
+      <blockquote>
+        <p>Outstanding real-world examples that are sure to appeal to both the novice and expert.</p>
+        <p class="source"><a href="http://manning.com/petricek2/">Jeff Smith ITT Education Services</a></p>
+      </blockquote>
+      <blockquote>
+        <p>I love the Deep Dives concept. This book is full of insights about how to apply the power of F# to real-world problems.</p>
+        <p class="source"><a href="http://manning.com/petricek2/">Dennis Sellinger, Géotech SARL</a></p>
+      </blockquote>
+
+      <h3>Social networks etc.</h3>
+      <blockquote>
+        <p>A must have book for every F# programmer.</p>
+        <p class="source"><a href="http://www.librarything.com/work/15567950">John Tarbox</a></p>
+      </blockquote>
+      <blockquote>
+        <p>Got F# Deep Dives book. Can't wait to read it as it's exactly the type of #fsharp book that we need!</p>
+        <p class="source"><a href="https://twitter.com/bstack/status/558548377705934848">Billy Stack</a></p>
+      </blockquote>
+
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ====================================================================================== -->
+
+<section id="samples">
+  <div class="container">
+    <div class="row"><div class="col-lg-12">
+      <h2>Samples and related free material</h2>
+      <hr />
+    </div></div>
+    <div class="row">
+      <div class="col-lg-6">
+        <p>Currently, two of the book chapters are available as free samples from Manning. You can
+          also get the full source code and additional information from the front matter of the book.
+          We are working on releasing additional excerpts from some of the chapters, which will appear
+          here when published!</p>
+
+        <ul>
+          <li><a href="https://github.com/tpetricek/DeepDives">Source code</a> contains commented
+            source code for all the chapters. Sometimes containing even more than you'll find in the book!</li>
+          <li><a href="http://manning.com/petricek2/excerpt_preface.html">Preface</a> explains the
+            motivation behind this book and how it differs from other books on F# and functional programming.</li>
+          <li><a href="http://manning.com/petricek2/excerpt_about.html">About</a> gives you a brief overview
+            of the contents of the book and the topics of the individual chapters.</li>
+          <li><a href="http://manning.com/petricek2/excerpt_contents.html">Table of contnets</a> shows
+            you a detailed structure of the book and what topics you'll find in it. </li>
+        </ul>
+        <!--
+        <h3>Chapter excerpts</h3>
+        <p>We are working on publishing a number of brief exceprts from a couple of additional
+        chapters. Check this page later for updates!</p>
+        -->
+      </div>
+
+      <div class="col-lg-6">
+        <h3 class="top">Sample chapters</h3>
+        <p>The following two chapters are available as free samples:</p>
+        <ul>
+          <li><strong><a href="http://manning.com/petricek2/FSharpDD_ch01.pdf">Chapter 1: Succeeding with functional-first programming in the industry</a> (Tomas Petricek and Don Syme)</strong>
+            looks at the business motivations behind using functional-first programming languages. What are the problems faced by businesses when developing software (and especially analytical components)? And how does F# help to solve those?</li>
+          <li><strong><a href="http://manning.com/petricek2/FSharpDD_ch05.pdf">Chapter 5: Understanding social networks</a> (Evelina Gabasova)</strong>
+            uses F# to understand social networks and more specifically Twitter. It is a great example of end-to-end data analysis with F# - starting from data access, implementing algorithms such as Page Rank and visualizing data using the D3 visualization library.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="errata">
+  <div class="container">
+    <div class="row"><div class="col-lg-12">
+      <h2>Errata</h2>
+      <hr />
+      <p>We tried to minimize the number of errors in the book as hard as I could. However, some errors are (unfortunately!) inevitable. This page contains the list of known issues. If you spot an issue that isn&#8217;t listed on this page, please send an email to Tomas at <a href="mailto:tomas@tomasp.net">tomas@tomasp.net</a>.</p>
+
+      <h3>Chapter 2</h3>
+      <ul>
+        <li><strong>Page 28 (Listing 2)</strong> The last three lines of the code in the listing look as follows:
+<pre>[0..x]
+|> Seq.sumBy (fun k -> f(!n) /
+                            (f(!k) * f(!(n-k))) *
+                            p**(f(k) * (1. - p)**f(n-k)))</pre>
+This should be the same as the code that appears later on page 29 (i.e. first multiply the two factorials and then covert the result to float):
+<pre>[0..x]
+|> Seq.sumBy (fun k -> f(!n) /
+                            (f(!k * !(n-k))) *
+                            p**(f(k)) * ((1. - p)**f(n-k)))</pre>
+        </li>
+      </ul>
+      <h3>Chapter 4</h3>
+      <ul>
+        <li><strong>Page 77 (sidebar)</strong> The first line in the sidebar says <em>Var(X) denotes the expectation of random variable X</em>.<br />
+          This should instead read <em>Var(X) denotes the variance of random variable X</em>.</li>
+      </ul>
+
+    </div></div>
+  </div>
+</section>
+
+<!-- ====================================================================================== -->
+<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+<div class="scroll-top page-scroll visible-xs visble-sm">
+  <p><a class="btn btn-primary" href="#page-top">
+    <i class="fa fa-chevron-up"></i> &nbsp;&nbsp; Go back to the top
+  </a></p>
+</div>
+
+<footer>
+  <div class="container"><div class="row">
+    <div class="col-md-4">
+      <h3>Author information</h3>
+      <p>Copyright Tomas Petricek, unless stated otherwise. Contact details and other info:</p>
+      <ul class="no-bullet">
+        <li><a href="mailto:tomas@tomasp.net"><i class="fa fa-fw fa-envelope"></i></a> <a href="mailto:tomas@tomasp.net">tomas@tomasp.net</a></li>
+        <li><a href="http://twitter.com/tomaspetricek"><i class="fa fa-fw fa-twitter"></i></a> <a href="http://twitter.com/tomaspetricek">@tomaspetricek</a></li>
+        <li><a href="http://tomasp.net"><i class="fa fa-fw fa-globe"></i></a> <a href="http://tomasp.net">http://tomasp.net</a></li>
+      </ul>
+    </div>
+    <div class="col-md-5">
+      <h3>More about F#</h3>
+      <p>Here are some other useful resources about F#, which are not affiliated to this site, but
+        are very much worth linking to:</p>
+      <ul class="no-bullet">
+        <li><a href="http://www.fsharp.org"><i class="fa fa-fw fa-external-link-square"></i></a>
+          <a href="http://www.fsharp.org">F# Software Foundation</a> is the home of F#</li>
+        <li><a href="http://fsharpforfunandprofit.com/"><i class="fa fa-fw fa-external-link-square"></i></a>
+          <a href="http://fsharpforfunandprofit.com/">F# for Fun and Profit</a> is a great free F# web</li>
+        <li><a href="http://tryfsharp.org/"><i class="fa fa-fw fa-external-link-square"></i></a>
+          <a href="http://tryfsharp.org/">Try F#</a> lets you experiment with F# online</li>
+      </ul>
+    </div>
+    <div class="col-md-3 text-right">
+      <img src="img/works-blue.png" />
+    </div>
+  </div></div>
+</footer>
+
+<!-- jQuery -->
+<script src="../js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="../js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="../js/classie.js"></script>
+<script src="../js/cbpAnimatedHeader.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="../js/freelancer.js"></script>
+</body>
+</html>
