@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="F# Deep Dives is a collection of case studies that demonstrate
+      how to use funcitonal-first programming in practice. Each chapter is written by an F# expert
+      and is based on their use of F# in industry.">
+    <meta name="author" content="Tomas Petricek">
+    <title>F# Deep Dives - Errata</title>
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="http://functional-programming.net/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="http://functional-programming.net/css/extra.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="http://functional-programming.net/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="page-top" class="index">
+
+<!-- ====================================================================================== -->
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://functional-programming.net">Functional Programming .NET</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li>
+                    <a href="http://functional-programming.net/deepdives">F# Deep Dives</a>
+                </li>
+                <li>
+                    <a href="http://functional-programming.net/rwfp">Real-World FP</a>
+                </li>
+              </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<!-- ====================================================================================== -->
+
+<!-- Header -->
+<header>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-7 intro-text">
+      <img src="http://functional-programming.net/img/diver.png" alt="F# Deep Dives" title="F# Deep Dives book cover" id="smallman"/>
+      <h1>F# Deep Dives</h1>
+      <p>F# Deep Dives is a collection of case studies that demonstrate how to use funcitonal-first
+        programming in practice. Each chapter is written by an F# expert and is based on their use
+        of F# in industry. You can get the book from <a href="http://www.manning.com/petricek2">Manning.com</a>, from
+        <a href="http://www.amazon.com/gp/product/1617291323/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1617291323&linkCode=as2&tag=httptomasnet-20&linkId=U4FPJJSKKCCKGNHD">Amazon.com</a> or
+        <a href="http://www.amazon.co.uk/gp/product/1617291323/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=1617291323&linkCode=as2&tag=tomasnet-21&linkId=HTUYVHHGWB4Q7X6V">Amazon.co.uk</a>
+        or your favorite book store.</p>
+    </div>
+    <div class="col-lg-5">
+      <img src="http://functional-programming.net/img/diver.png" alt="F# Deep Dives" title="F# Deep Dives book cover" id="bigman"/>
+    </div>
+  </div>
+</div>
+</header>
+<header id="ad">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <a class="flr" href="mailto:info@fsharpworks.com"><i class="fa fa-envelope"></i></a>
+        <a class="flr" href="https://twitter.com/fsharpWorks"><i class="fa fa-twitter"></i></a>
+        <p><strong>Need more help?</strong> At F# Works, we also offer <a href="http://functional-programming.net/#trainings">trainings</a> and <a href="http://functional-programming.net/#consulting">consulting</a>.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ====================================================================================== -->
+
+<section id="errata">
+  <div class="container">
+    <div class="row"><div class="col-md-12">
+      <h2>Errata</h2>
+      <hr />
+      <p>We tried to minimize the number of errors in the book as hard as I could. However, some errors are (unfortunately!) inevitable. This page contains the list of known issues. If you spot an issue that isn&#8217;t listed on this page, please send an email to Tomas at <a href="mailto:tomas@tomasp.net">tomas@tomasp.net</a>.</p>
+
+      <h3>Chapter 2</h3>
+      <ul>
+        <li><strong>Page 28 (Listing 2)</strong> The last three lines of the code in the listing look as follows:
+<pre>[0..x]
+|> Seq.sumBy (fun k -> f(!n) /
+                            (f(!k) * f(!(n-k))) *
+                            p**(f(k) * (1. - p)**f(n-k)))</pre>
+This should be the same as the code that appears later on page 29 (i.e. first multiply the two factorials and then covert the result to float):
+<pre>[0..x]
+|> Seq.sumBy (fun k -> f(!n) /
+                            (f(!k * !(n-k))) *
+                            p**(f(k)) * ((1. - p)**f(n-k)))</pre>
+        </li>
+      </ul>
+      <h3>Chapter 4</h3>
+      <ul>
+        <li><strong>Page 77 (sidebar)</strong> The first line in the sidebar says <em>Var(X) denotes the expectation of random variable X</em>.<br />
+          This should instead read <em>Var(X) denotes the variance of random variable X</em>.</li>
+      </ul>
+
+    </div></div>
+  </div>
+</section>
+
+<!-- ====================================================================================== -->
+<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+<div class="scroll-top page-scroll visible-xs visble-sm">
+  <p><a class="btn btn-primary" href="#page-top">
+    <i class="fa fa-chevron-up"></i> &nbsp;&nbsp; Go back to the top
+  </a></p>
+</div>
+
+<footer>
+  <div class="container"><div class="row">
+    <div class="col-md-4">
+      <h3>Author information</h3>
+      <ul class="no-bullet">
+        <li><a href="mailto:tomas@tomasp.net"><i class="fa fa-fw fa-envelope"></i></a> <a href="mailto:tomas@tomasp.net">tomas@tomasp.net</a></li>
+        <li><a href="http://twitter.com/tomaspetricek"><i class="fa fa-fw fa-twitter"></i></a> <a href="http://twitter.com/tomaspetricek">@tomaspetricek</a></li>
+        <li><a href="http://tomasp.net"><i class="fa fa-fw fa-globe"></i></a> <a href="http://tomasp.net">http://tomasp.net</a></li>
+      </ul>
+      <p>The page is <a href="https://github.com/tpetricek/FunctionalProgramming.Net">hosted on GitHub</a>.
+        Please send pull requests with corrections &amp; report issues there.</p>
+    </div>
+    <div class="col-md-5">
+      <h3>More about F#</h3>
+      <p>Here are some other useful resources about F#, which are not affiliated to this site, but
+        are very much worth linking to:</p>
+      <ul class="no-bullet">
+        <li><a href="http://www.fsharp.org"><i class="fa fa-fw fa-external-link-square"></i></a>
+          <a href="http://www.fsharp.org">F# Software Foundation</a> - the F# home</li>
+        <li><a href="http://fsharpforfunandprofit.com/"><i class="fa fa-fw fa-external-link-square"></i></a>
+          <a href="http://fsharpforfunandprofit.com/">F# for Fun and Profit</a> is a great F# web</li>
+        <li><a href="http://tryfsharp.org/"><i class="fa fa-fw fa-external-link-square"></i></a>
+          <a href="http://tryfsharp.org/">Try F#</a> for experimenting with F# online</li>
+      </ul>
+    </div>
+    <div class="col-md-3 text-right">
+      <img src="http://functional-programming.net/img/works-blue.png" />
+    </div>
+  </div></div>
+</footer>
+
+<!-- jQuery -->
+<script src="http://functional-programming.net/js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="http://functional-programming.net/js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="http://functional-programming.net/js/classie.js"></script>
+<script src="http://functional-programming.net/js/cbpAnimatedHeader.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="http://functional-programming.net/js/freelancer.js"></script>
+</body>
+</html>
