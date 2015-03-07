@@ -114,11 +114,12 @@
 |> Seq.sumBy (fun k -> f(!n) /
                             (f(!k) * f(!(n-k))) *
                             p**(f(k) * (1. - p)**f(n-k)))</pre>
-This should be the same as the code that appears later on page 29 (i.e. first multiply the two factorials and then covert the result to float):
+This should be the same as the code that appears later on page 29 (i.e. additional parentheses are needed around <code>**</code> to
+specify the correct priority; also we first multiply the two factorials and then covert the result to float):
 <pre>[0..x]
 |> Seq.sumBy (fun k -> f(!n) /
                             (f(!k * !(n-k))) *
-                            p**(f(k)) * ((1. - p)**f(n-k)))</pre>
+                            (p**(f(k))) * ((1. - p)**f(n-k)))</pre>
         </li>
       </ul>
       <h3>Chapter 4</h3>
@@ -126,7 +127,11 @@ This should be the same as the code that appears later on page 29 (i.e. first mu
         <li><strong>Page 77 (sidebar)</strong> The first line in the sidebar says <em>Var(X) denotes the expectation of random variable X</em>.<br />
           This should instead read <em>Var(X) denotes the variance of random variable X</em>.</li>
       </ul>
-
+      <h3>Chapter 8</h3>
+      <ul>
+        <li><strong>Page 194</strong> The first paragraph (below listing 17) says <em>listing 18 shows an asynchronous version of listing 17</em>.
+          The reference to previous listing is incorrect. The correct is: <em>listing 18 shows an asynchronous version of listing 13</em>.</li>
+      </ul>
     </div></div>
   </div>
 </section>
